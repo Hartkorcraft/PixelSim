@@ -72,8 +72,6 @@ namespace SFML2.Source
 
         void Draw(RenderWindow window)
         {
-            ImageDisplay = new Image(ImageDisplay.Size.X, ImageDisplay.Size.Y, Color.Cyan);
-
             Parallel.For(0, Size.Y, y =>
              {
                  Parallel.For(0, Size.X, x =>
@@ -98,7 +96,6 @@ namespace SFML2.Source
 
                  });
              });
-
             texture.Update(pixelBuffer0);
             Game.Window.Draw(sprite);
         }
